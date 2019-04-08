@@ -1,5 +1,5 @@
 body {
-  background: image_url('bg.png');
+  background: url('bg.png');
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;  
 }
 
@@ -35,17 +35,25 @@ body {
 .frosty h1 {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
-  text-shadow: rgba(0, 0, 0, 0, 0.95) 1px 1px;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .frosty h2 {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
-  text-shadow: rgba(0, 0, 0, 0, 0.95) 1px 1px;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
+}
+
+.help-block {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+  margin: 10px;
 }
 
 .hero {
