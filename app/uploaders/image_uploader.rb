@@ -1,4 +1,6 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class ImageUploader < CarrierWave::Uploader::Baseinclude CarrierWave::MiniMagick
+
+  include CarrierWave::MiniMagick
 
   if Rails.env.production?
     storage :fog
@@ -9,6 +11,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   #storage :file
   #storage :aws
   #storage :fog
+  
+  process resize_to_fill: [800, 350]
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
