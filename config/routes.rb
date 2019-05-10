@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   get 'careers', to: 'static_pages#careers'
   resources :courses, only: [:index, :show] do
     resources :enrollments, only: :create
-  end
-  resources :lessons, only: [:show]
+  end  
   namespace :instructor do
     resources :lessons, only: [:update]
     resources :sections, only: [:update] do
@@ -18,4 +17,7 @@ Rails.application.routes.draw do
       resources :sections, only: [:create]
     end
   end
+  resources :users, only: [:show]
+  resources :courses, only: [:index, :show]
+  resources :lessons, only: [:show]
 end
